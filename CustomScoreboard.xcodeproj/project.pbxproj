@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F7081191AF00A5700DC9AE4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7081181AF00A5700DC9AE4 /* SettingsViewController.swift */; };
 		3F7EC4FA1AE6B39F0037811B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7EC4F91AE6B39F0037811B /* AppDelegate.swift */; };
 		3F7EC4FC1AE6B39F0037811B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7EC4FB1AE6B39F0037811B /* ViewController.swift */; };
 		3F7EC4FF1AE6B39F0037811B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7EC4FD1AE6B39F0037811B /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F7081181AF00A5700DC9AE4 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		3F7EC4F41AE6B39F0037811B /* CustomScoreboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomScoreboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7EC4F81AE6B39F0037811B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F7EC4F91AE6B39F0037811B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				3F7EC4F91AE6B39F0037811B /* AppDelegate.swift */,
 				3F7EC4FB1AE6B39F0037811B /* ViewController.swift */,
 				3F7EC4FD1AE6B39F0037811B /* Main.storyboard */,
+				3F7081181AF00A5700DC9AE4 /* SettingsViewController.swift */,
 				3F7EC5001AE6B39F0037811B /* Images.xcassets */,
 				3F7EC5021AE6B39F0037811B /* LaunchScreen.xib */,
 				3F7EC4F71AE6B39F0037811B /* Supporting Files */,
@@ -214,6 +217,7 @@
 			files = (
 				3F7EC4FC1AE6B39F0037811B /* ViewController.swift in Sources */,
 				3F7EC4FA1AE6B39F0037811B /* AppDelegate.swift in Sources */,
+				3F7081191AF00A5700DC9AE4 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +415,7 @@
 				3F7EC5151AE6B39F0037811B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F7EC5161AE6B39F0037811B /* Build configuration list for PBXNativeTarget "CustomScoreboardTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +424,7 @@
 				3F7EC5181AE6B39F0037811B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
