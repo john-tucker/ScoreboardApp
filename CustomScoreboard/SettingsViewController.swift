@@ -13,7 +13,7 @@ class SettingsViewController: UIViewController
 
     @IBAction func nightButton(sender: UIButton)
     {
-        //change background colors of all view controllers, if white.
+        
     }
     
     override func viewDidLoad()
