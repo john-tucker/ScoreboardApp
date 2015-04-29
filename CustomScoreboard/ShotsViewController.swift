@@ -13,9 +13,7 @@ class ShotsViewController: UIViewController
     
     @IBOutlet weak var drinkLabel: UILabel!
     var drinkNumber = 0
-    
     @IBOutlet weak var warningLabel: UILabel!
-    
     @IBAction func drinkButton(sender: UIButton)
     {
         drinkNumber++

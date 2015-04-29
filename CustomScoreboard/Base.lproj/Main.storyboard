@@ -149,7 +149,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="82" width="206" height="82"/>
+                                    <rect key="frame" x="-16" y="72" width="206" height="82"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Turn Indicator:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDu-Tj-NDk">
@@ -180,6 +180,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="174" y="529" width="86" height="51"/>
                                 </variation>
+                                <connections>
+                                    <action selector="nextPlayerButton:" destination="Grw-Pz-Z5q" eventType="touchUpInside" id="MpH-VM-CQ4"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibP-P1-uz3">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -247,13 +250,43 @@
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3TN-BZ-cdH">
                                 <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="214" y="72" width="177" height="159"/>
+                                    <rect key="frame" x="194" y="72" width="177" height="159"/>
                                 </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="Grw-Pz-Z5q" id="gN9-ds-g58"/>
                                     <outlet property="delegate" destination="Grw-Pz-Z5q" id="O6u-DW-9Du"/>
                                 </connections>
                             </pickerView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3DO-d2-97Q">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="30" y="201" width="97" height="30"/>
+                                </variation>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Threshold?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0oi-AG-qXp">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="35" y="162" width="86" height="21"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qr0-hS-w7x">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Scoring:">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="48" y="529" width="90" height="51"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="eHG-Sp-ZGn" kind="show" id="DUi-J9-Wf7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -271,6 +304,9 @@
                                 <exclude reference="3kj-bD-DDo"/>
                                 <exclude reference="LKk-YR-yMk"/>
                                 <exclude reference="3TN-BZ-cdH"/>
+                                <exclude reference="3DO-d2-97Q"/>
+                                <exclude reference="0oi-AG-qXp"/>
+                                <exclude reference="Qr0-hS-w7x"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -288,16 +324,66 @@
                                 <include reference="3kj-bD-DDo"/>
                                 <include reference="LKk-YR-yMk"/>
                                 <include reference="3TN-BZ-cdH"/>
+                                <include reference="3DO-d2-97Q"/>
+                                <include reference="0oi-AG-qXp"/>
+                                <include reference="Qr0-hS-w7x"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="playerPicker" destination="3TN-BZ-cdH" id="mzL-sN-3S9"/>
+                        <outlet property="playerTurnLabel" destination="NZh-LQ-wrd" id="1lP-te-xQb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m6V-ll-eLl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2091" y="52"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Xm3-PG-fXX">
+            <objects>
+                <viewController id="eHG-Sp-ZGn" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="faK-JU-hTq"/>
+                        <viewControllerLayoutGuide type="bottom" id="mxB-vn-ZDu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dSm-EV-FAV">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greedrules" translatesAutoresizingMaskIntoConstraints="NO" id="hVz-Qe-mvj">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="114" width="384" height="486"/>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Greed Scoring Rules:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n45-5G-2A2">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="85" width="164" height="21"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="hVz-Qe-mvj"/>
+                                <exclude reference="n45-5G-2A2"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="hVz-Qe-mvj"/>
+                                <include reference="n45-5G-2A2"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uwg-mS-5Im" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2799" y="54"/>
         </scene>
         <!--Shots View Controller-->
         <scene sceneID="oC0-yq-5ed">
@@ -468,6 +554,7 @@
         <image name="dice" width="1200" height="740"/>
         <image name="drinks" width="350" height="250"/>
         <image name="f02a62985cde" width="512" height="512"/>
+        <image name="greedrules" width="484" height="531"/>
         <image name="timer" width="225" height="225"/>
     </resources>
 </document>
