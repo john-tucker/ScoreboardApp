@@ -16,23 +16,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the number of players:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWn-Sn-VIB">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="88" y="63" width="225" height="21"/>
-                                </variation>
-                            </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gsd-zr-rlP">
                                 <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="92" width="400" height="162"/>
+                                    <rect key="frame" x="0.0" y="92" width="356" height="162"/>
                                 </variation>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="XCX-Gs-9M7"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="QJn-23-lj3"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="UJM-SB-YKq"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="mWL-TQ-E0Z"/>
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iut-OS-XdN">
@@ -52,23 +43,26 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="218" y="262" width="156" height="85"/>
+                                    <rect key="frame" x="200" y="262" width="156" height="85"/>
                                 </variation>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="769-fN-sK2">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Shot Counter">
+                                <state key="normal" title="Drink Counter">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="218" y="375" width="156" height="85"/>
+                                    <rect key="frame" x="200" y="375" width="156" height="85"/>
                                 </variation>
+                                <connections>
+                                    <segue destination="AE3-md-jO1" kind="show" id="bjT-b8-Gvt"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3a-mn-nNF">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="???">
+                                <state key="normal" title="Game Timer">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -92,17 +86,25 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="218" y="489" width="156" height="85"/>
+                                    <rect key="frame" x="200" y="489" width="156" height="85"/>
                                 </variation>
                                 <connections>
                                     <segue destination="veh-dv-SVg" kind="show" identifier="SettingsSegue" id="S8g-Ou-ExX"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the number of players:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWn-Sn-VIB">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="66" y="81" width="225" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="zWn-Sn-VIB"/>
                                 <exclude reference="Gsd-zr-rlP"/>
                                 <exclude reference="iut-OS-XdN"/>
                                 <exclude reference="Pqj-sA-yfw"/>
@@ -110,11 +112,11 @@
                                 <exclude reference="n3a-mn-nNF"/>
                                 <exclude reference="PN7-FG-BwZ"/>
                                 <exclude reference="usr-lK-WCj"/>
+                                <exclude reference="zWn-Sn-VIB"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="zWn-Sn-VIB"/>
                                 <include reference="Gsd-zr-rlP"/>
                                 <include reference="iut-OS-XdN"/>
                                 <include reference="Pqj-sA-yfw"/>
@@ -122,6 +124,7 @@
                                 <include reference="n3a-mn-nNF"/>
                                 <include reference="PN7-FG-BwZ"/>
                                 <include reference="usr-lK-WCj"/>
+                                <include reference="zWn-Sn-VIB"/>
                             </mask>
                         </variation>
                     </view>
@@ -130,6 +133,97 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1341" y="300"/>
+        </scene>
+        <!--Shots View Controller-->
+        <scene sceneID="oC0-yq-5ed">
+            <objects>
+                <viewController id="AE3-md-jO1" customClass="ShotsViewController" customModule="CustomScoreboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DyC-ng-uXd"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qyn-Ul-iVF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="akR-gk-5KI">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keep track of your alcohol intake with this convenient drink counter!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ip5-Vi-vTD">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="72" width="349" height="115"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="og0-iE-dmP">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Drink!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="143" y="423" width="94" height="54"/>
+                                </variation>
+                                <connections>
+                                    <action selector="drinkButton:" destination="AE3-md-jO1" eventType="touchUpInside" id="64n-fK-acK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For use by adults over the age of 21 only.  Please drink responsibly" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nK0-xf-UDU">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="532" width="402" height="73"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GK7-YG-lWs">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="75" y="185" width="230" height="230"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pNT-ig-zf3">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="6" y="494" width="368" height="30"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="ip5-Vi-vTD"/>
+                                <exclude reference="og0-iE-dmP"/>
+                                <exclude reference="nK0-xf-UDU"/>
+                                <exclude reference="GK7-YG-lWs"/>
+                                <exclude reference="pNT-ig-zf3"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="ip5-Vi-vTD"/>
+                                <include reference="og0-iE-dmP"/>
+                                <include reference="nK0-xf-UDU"/>
+                                <include reference="GK7-YG-lWs"/>
+                                <include reference="pNT-ig-zf3"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="drinkLabel" destination="GK7-YG-lWs" id="hqX-ga-P5N"/>
+                        <outlet property="warningLabel" destination="pNT-ig-zf3" id="dva-b8-szl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aap-5K-4Dy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2482.5" y="777"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="Wkb-Di-Zby">
@@ -140,6 +234,7 @@
                         <viewControllerLayoutGuide type="bottom" id="8Dh-Oe-Gqn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="SI0-Bu-0ND">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QFe-0M-EB5">
@@ -181,7 +276,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o12-Tq-CPb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2025" y="995"/>
+            <point key="canvasLocation" x="1791" y="1107"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VSL-hS-Rne">
