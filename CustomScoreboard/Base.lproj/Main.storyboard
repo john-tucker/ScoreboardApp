@@ -332,12 +332,16 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="greed" destination="QLc-ru-piM" id="KLp-yh-5gG"/>
+                        <outlet property="info" destination="YMR-tl-diw" id="UFH-ca-xRj"/>
                         <outlet property="nameFive" destination="cjP-iT-2PI" id="7rM-Zk-rPd"/>
                         <outlet property="nameFour" destination="QmH-Xz-Ugv" id="ScZ-SD-Rfn"/>
                         <outlet property="nameOne" destination="x3D-X9-6ba" id="Ign-wa-G7e"/>
                         <outlet property="nameSix" destination="PeX-8U-BXL" id="R49-2B-YiS"/>
                         <outlet property="nameThree" destination="iUi-cJ-ce1" id="mRq-wi-XFz"/>
                         <outlet property="nameTwo" destination="OMA-ov-ryH" id="Krw-B6-RU4"/>
+                        <outlet property="text1" destination="Yr3-Y2-cKv" id="Z4D-7O-C1q"/>
+                        <outlet property="text2" destination="nnt-Lu-h4z" id="nAQ-1H-8Mk"/>
                         <outlet property="thresholdAmt" destination="3DO-d2-97Q" id="KBx-zF-wQ4"/>
                     </connections>
                 </viewController>

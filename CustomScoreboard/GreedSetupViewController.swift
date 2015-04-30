@@ -1,5 +1,5 @@
 //
-//  GreedSetupViewController.swift
+//  GreedSetupVC.swift
 //  CustomScoreboard
 //
 //  Created by Tucker on 4/29/15.
@@ -81,9 +81,21 @@ class GreedSetupVC: UIViewController
         {
             var dvc = segue.destinationViewController as! GreedViewController
             dvc.scoreArray = array
+            /*
+            dvc.nameP1 = nameOne.text
+            dvc.nameP2 = nameTwo.text
+            dvc.nameP3 = nameThree.text
+            dvc.nameP4 = nameFour.text
+            dvc.nameP5 = nameFive.text
+            dvc.nameP6 = nameSix.text
+            */
         }
     }
-
+    
+    @IBOutlet weak var greed: UILabel!
+    @IBOutlet weak var info: UILabel!
+    @IBOutlet weak var text1: UILabel!
+    @IBOutlet weak var text2: UILabel!
     
     
     override func viewDidLoad()

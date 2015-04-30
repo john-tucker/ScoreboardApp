@@ -13,13 +13,33 @@ class SettingsViewController: UIViewController
 
     @IBAction func nightButton(sender: UIButton)
     {
-        
+        nightMode()
     }
     
+    func nightMode()
+    {
+        var night = UIColor.blackColor()
+        ViewController(view.backgroundColor = night)
+        GreedSetupVC(view.backgroundColor = night)
+        ShotsViewController(view.backgroundColor = night)
+        GreedViewController(view.backgroundColor = night)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if (segue.identifier == "SettingsSegue")
+        {
+            var dvc = segue.destinationViewController as! ViewController
+        }
+    }
+    
+    func saveChanges()
+    {
+        
+    }
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
     }
 
 

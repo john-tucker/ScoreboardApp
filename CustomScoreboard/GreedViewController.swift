@@ -10,6 +10,13 @@ import UIKit
 
 class GreedViewController: UIViewController
 {
+  /*  var nameP1 : GreedSetupVC
+    var nameP2
+    var nameP3
+    var nameP4
+    var nameP5
+    var nameP6
+   */
     func hideKeyBoard()
     {
         roundScoreLabel.resignFirstResponder()
@@ -31,7 +38,6 @@ class GreedViewController: UIViewController
     }
     
     var scoreArray : [GreedScoreArray] = []
-    
     @IBOutlet weak var playerScoreLabel: UILabel!
     @IBOutlet weak var roundScoreLabel: UITextField!
     @IBOutlet weak var newScoreLabel: UILabel!
@@ -51,17 +57,12 @@ class GreedViewController: UIViewController
         playerButtonNumber++
         playerTurnLabel.text = "\(playerButtonNumber)"
         playerNumber <= range
-        var playerScoreText = runningScore.description
+        var playerScoreText = runningScore.hashValue
         
         if playerButtonNumber == 1
         {
             playerTurnLabel.backgroundColor = UIColor.blueColor()
-            playerScoreLabel.text = playerScoreText
-            scoreArray.removeLast()
-            runningScore = playerScoreText.toInt()!
-            newScore = playerScore + runningScore
-            
-            runningScore = newScore
+            playerScoreLabel.text = "\(playerScoreText)"
             
         }
         if playerButtonNumber == 2
