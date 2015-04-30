@@ -10,22 +10,19 @@ import UIKit
 
 class GreedViewController: UIViewController
 {
-    
-    @IBOutlet weak var playerPicker: UIPickerView!
-    
-    var numberOfPlayers = ["1", "2", "3", "4", "5", "6"]
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return 1
+    func hideKeyBoard()
+    {
+        roundScoreLabel.resignFirstResponder()
     }
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return numberOfPlayers.count
-    }
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
-        return numberOfPlayers[row]
+    @IBAction func screenTapped(sender: UITapGestureRecognizer)
+    {
+        hideKeyBoard()
     }
     
     @IBOutlet weak var playerTurnLabel: UILabel!
     var playerNumber = 0
+    
+    var players:[Int] = []
     
     @IBAction func nextPlayerButton(sender : UIButton)
     {
@@ -37,11 +34,60 @@ class GreedViewController: UIViewController
         playerNumber++
         println(playerNumber)
         playerTurnLabel.text = "\(playerNumber)"
+        
+        if playerNumber == 1
+        {
+            playerTurnLabel.backgroundColor = UIColor.blueColor()
+        }
+        if playerNumber == 2
+        {
+            playerTurnLabel.backgroundColor = UIColor.redColor()
+        }
+        if playerNumber == 3
+        {
+            playerTurnLabel.backgroundColor = UIColor.yellowColor()
+        }
+        if playerNumber == 4
+        {
+            playerTurnLabel.backgroundColor = UIColor.greenColor()
+        }
+        if playerNumber == 5
+        {
+            playerTurnLabel.backgroundColor = UIColor.purpleColor()
+        }
+        
         if playerNumber == 6
         {
             playerNumber = 0
+            playerTurnLabel.backgroundColor = UIColor.orangeColor()
         }
     }
+    
+    @IBOutlet weak var playerScoreLabel: UILabel!
+    @IBOutlet weak var roundScoreLabel: UITextField!
+    @IBOutlet weak var newScoreLabel: UILabel!
+
+    @IBAction func scoreButton(sender: UIButton)
+    {
+        calcScore()
+    }
+    
+    func calcScore()
+    {
+        var playerScore = 0
+        var roundScore = roundScoreLabel.text.toInt()
+        var newScore = 0
+
+        if roundScore != nil
+        {
+            newScore = playerScore + roundScore!
+            newScoreLabel.text = "\(newScore)"
+            roundScoreLabel.resignFirstResponder()
+ 
+        }       
+    }
+    
+    
     
     @IBAction func rulesButton(sender: UIButton)
     {
@@ -53,7 +99,6 @@ class GreedViewController: UIViewController
 
     }
     
-
     override func viewDidLoad()
     {
         super.viewDidLoad()

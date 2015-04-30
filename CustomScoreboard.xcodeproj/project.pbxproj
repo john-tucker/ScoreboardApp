@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3F2AA03D1AF0508A0017A152 /* ShotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2AA03C1AF0508A0017A152 /* ShotsViewController.swift */; };
 		3F2AA03F1AF134FE0017A152 /* GreedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2AA03E1AF134FE0017A152 /* GreedViewController.swift */; };
+		3F2AA0431AF15A3B0017A152 /* GreedScoreArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2AA0421AF15A3B0017A152 /* GreedScoreArray.swift */; };
+		3F2AA0451AF15B030017A152 /* GreedSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2AA0441AF15B030017A152 /* GreedSetupViewController.swift */; };
 		3F7081191AF00A5700DC9AE4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7081181AF00A5700DC9AE4 /* SettingsViewController.swift */; };
 		3F7EC4FA1AE6B39F0037811B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7EC4F91AE6B39F0037811B /* AppDelegate.swift */; };
 		3F7EC4FC1AE6B39F0037811B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7EC4FB1AE6B39F0037811B /* ViewController.swift */; };
@@ -31,6 +33,8 @@
 /* Begin PBXFileReference section */
 		3F2AA03C1AF0508A0017A152 /* ShotsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotsViewController.swift; sourceTree = "<group>"; };
 		3F2AA03E1AF134FE0017A152 /* GreedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreedViewController.swift; sourceTree = "<group>"; };
+		3F2AA0421AF15A3B0017A152 /* GreedScoreArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GreedScoreArray.swift; path = ../GreedScoreArray.swift; sourceTree = "<group>"; };
+		3F2AA0441AF15B030017A152 /* GreedSetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GreedSetupViewController.swift; sourceTree = "<group>"; };
 		3F7081181AF00A5700DC9AE4 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		3F7EC4F41AE6B39F0037811B /* CustomScoreboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomScoreboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7EC4F81AE6B39F0037811B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -86,6 +90,8 @@
 				3F7EC4F91AE6B39F0037811B /* AppDelegate.swift */,
 				3F7EC4FB1AE6B39F0037811B /* ViewController.swift */,
 				3F7EC4FD1AE6B39F0037811B /* Main.storyboard */,
+				3F2AA0421AF15A3B0017A152 /* GreedScoreArray.swift */,
+				3F2AA0441AF15B030017A152 /* GreedSetupViewController.swift */,
 				3F2AA03E1AF134FE0017A152 /* GreedViewController.swift */,
 				3F2AA03C1AF0508A0017A152 /* ShotsViewController.swift */,
 				3F7081181AF00A5700DC9AE4 /* SettingsViewController.swift */,
@@ -221,9 +227,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F2AA0431AF15A3B0017A152 /* GreedScoreArray.swift in Sources */,
 				3F2AA03D1AF0508A0017A152 /* ShotsViewController.swift in Sources */,
 				3F7EC4FC1AE6B39F0037811B /* ViewController.swift in Sources */,
 				3F7EC4FA1AE6B39F0037811B /* AppDelegate.swift in Sources */,
+				3F2AA0451AF15B030017A152 /* GreedSetupViewController.swift in Sources */,
 				3F7081191AF00A5700DC9AE4 /* SettingsViewController.swift in Sources */,
 				3F2AA03F1AF134FE0017A152 /* GreedViewController.swift in Sources */,
 			);
