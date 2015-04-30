@@ -141,7 +141,8 @@
                                     <rect key="frame" x="161" y="533" width="78" height="47"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="Grw-Pz-Z5q" kind="show" id="RZE-fi-sVJ"/>
+                                    <action selector="setupArray:" destination="QJc-rR-FFg" eventType="touchUpInside" id="uDu-XL-58t"/>
+                                    <segue destination="Grw-Pz-Z5q" kind="show" identifier="GreedSetup" id="RZE-fi-sVJ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnt-Lu-h4z">
@@ -347,7 +348,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2038.5" y="22"/>
+            <point key="canvasLocation" x="2106" y="22"/>
         </scene>
         <!--Greed View Controller-->
         <scene sceneID="M8R-a3-2ea">
@@ -551,7 +552,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2724" y="22"/>
+            <point key="canvasLocation" x="2841" y="22"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Xm3-PG-fXX">
@@ -598,7 +599,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uwg-mS-5Im" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3471" y="22"/>
+            <point key="canvasLocation" x="3555" y="22"/>
         </scene>
         <!--Shots View Controller-->
         <scene sceneID="oC0-yq-5ed">

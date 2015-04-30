@@ -10,7 +10,7 @@ import UIKit
 
 class GreedSetupVC: UIViewController
 {
-    var GSArray = GreedScoreArray()
+    var array : [GreedScoreArray] = []
     @IBOutlet weak var nameOne: UITextField!
     @IBOutlet weak var nameTwo: UITextField!
     @IBOutlet weak var nameThree: UITextField!
@@ -20,16 +20,43 @@ class GreedSetupVC: UIViewController
     
     @IBOutlet weak var thresholdAmt: UITextField!
    
-    func arrayOne()
+    func scoreArray()
     {
         if nameOne != nil
         {
-            GreedScoreArray(playerName: "\(nameOne)", playerNumber: 1, playerScore: 0)
-            println(GSArray)
-
+            array.append(GreedScoreArray(playerName: "\(nameOne)", playerNumber: 1, runningScore: 0))
+        }
+        if nameTwo != nil
+        {
+            array.append(GreedScoreArray(playerName: "\(nameTwo)", playerNumber: 2, runningScore: 0))
+        }
+        if nameThree != nil
+        {
+            array.append(GreedScoreArray(playerName: "\(nameThree)", playerNumber: 3, runningScore: 0))
+        }
+        if nameFour != nil
+        {
+            array.append(GreedScoreArray(playerName: "\(nameFour)", playerNumber: 4, runningScore: 0))
+        }
+        if nameFive != nil
+        {
+            array.append(GreedScoreArray(playerName: "\(nameFive)", playerNumber: 5, runningScore: 0))
+        }
+        if nameSix != nil
+        {
+            array.append(GreedScoreArray(playerName: "\(nameSix)", playerNumber: 6, runningScore: 0))
         }
         
-                
+        else
+        {
+            var endTurnRange = array.count
+            println(endTurnRange)
+        }
+    }
+    
+    @IBAction func setupArray(sender: AnyObject)
+    {
+        scoreArray()
     }
     
     func hideKeyboards()
@@ -40,6 +67,7 @@ class GreedSetupVC: UIViewController
         nameFour.resignFirstResponder()
         nameFive.resignFirstResponder()
         nameSix.resignFirstResponder()
+        thresholdAmt.resignFirstResponder()
     }
     
     @IBAction func hideKeys(sender: AnyObject)
@@ -47,6 +75,16 @@ class GreedSetupVC: UIViewController
         hideKeyboards()
     }
    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if (segue.identifier == "GreedSetup")
+        {
+            var dvc = segue.destinationViewController as! GreedViewController
+            dvc.scoreArray = array
+        }
+    }
+
+    
     
     override func viewDidLoad()
     {

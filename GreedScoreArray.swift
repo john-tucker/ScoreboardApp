@@ -12,13 +12,13 @@ class GreedScoreArray: NSObject
 {
     var playerName = ""
     var playerNumber = 0
-    var playerScore = 0
+    var runningScore = 0
     
-    convenience init(playerName: String!, playerNumber: Int!, playerScore: Int!)
+    convenience init(playerName: String!, playerNumber: Int!, runningScore: Int!)
     {
         self.init()
         self.playerName = playerName
         self.playerNumber = playerNumber
-        self.playerScore = playerScore
+        self.runningScore = runningScore
     }
 }

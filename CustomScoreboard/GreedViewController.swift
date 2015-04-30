@@ -20,6 +20,7 @@ class GreedViewController: UIViewController
     }
     
     @IBOutlet weak var playerTurnLabel: UILabel!
+    var playerButtonNumber = 0
     var playerNumber = 0
     
     var players:[Int] = []
@@ -29,44 +30,65 @@ class GreedViewController: UIViewController
         whoseTurn()
     }
     
-    func whoseTurn()
-    {
-        playerNumber++
-        println(playerNumber)
-        playerTurnLabel.text = "\(playerNumber)"
-        
-        if playerNumber == 1
-        {
-            playerTurnLabel.backgroundColor = UIColor.blueColor()
-        }
-        if playerNumber == 2
-        {
-            playerTurnLabel.backgroundColor = UIColor.redColor()
-        }
-        if playerNumber == 3
-        {
-            playerTurnLabel.backgroundColor = UIColor.yellowColor()
-        }
-        if playerNumber == 4
-        {
-            playerTurnLabel.backgroundColor = UIColor.greenColor()
-        }
-        if playerNumber == 5
-        {
-            playerTurnLabel.backgroundColor = UIColor.purpleColor()
-        }
-        
-        if playerNumber == 6
-        {
-            playerNumber = 0
-            playerTurnLabel.backgroundColor = UIColor.orangeColor()
-        }
-    }
+    var scoreArray : [GreedScoreArray] = []
     
     @IBOutlet weak var playerScoreLabel: UILabel!
     @IBOutlet weak var roundScoreLabel: UITextField!
     @IBOutlet weak var newScoreLabel: UILabel!
 
+    func whoseTurn()
+    {
+        var endTurnRange = scoreArray.count
+        var range = -1*(0-(endTurnRange+1))
+        
+        var playerScore = 0
+        var runningScore = 0
+        var roundScore = roundScoreLabel.text.toInt()
+        var newScore = 0
+        
+        if true
+        {
+        playerButtonNumber++
+        playerTurnLabel.text = "\(playerButtonNumber)"
+        playerNumber <= range
+        var playerScoreText = runningScore.description
+        
+        if playerButtonNumber == 1
+        {
+            playerTurnLabel.backgroundColor = UIColor.blueColor()
+            playerScoreLabel.text = playerScoreText
+            scoreArray.removeLast()
+            runningScore = playerScoreText.toInt()!
+            newScore = playerScore + runningScore
+            
+            runningScore = newScore
+            
+        }
+        if playerButtonNumber == 2
+        {
+            playerTurnLabel.backgroundColor = UIColor.redColor()
+        }
+        if playerButtonNumber == 3
+        {
+            playerTurnLabel.backgroundColor = UIColor.yellowColor()
+        }
+        if playerButtonNumber == 4
+        {
+            playerTurnLabel.backgroundColor = UIColor.greenColor()
+        }
+        if playerButtonNumber == 5
+        {
+            playerTurnLabel.backgroundColor = UIColor.purpleColor()
+        }
+        
+        if playerButtonNumber == 6
+        {
+            playerButtonNumber = 0
+            playerTurnLabel.backgroundColor = UIColor.orangeColor()
+        }
+        }
+    }
+    
     @IBAction func scoreButton(sender: UIButton)
     {
         calcScore()
@@ -83,12 +105,9 @@ class GreedViewController: UIViewController
             newScore = playerScore + roundScore!
             newScoreLabel.text = "\(newScore)"
             roundScoreLabel.resignFirstResponder()
- 
         }       
     }
-    
-    
-    
+
     @IBAction func rulesButton(sender: UIButton)
     {
         var alert = UIAlertController(title: "Rules:", message: "Players roll 6 die to begin with on their turn, removing at least one scoring dice each turn.  If all 6 die score, the player collects all dice, and rerolls, building on their score.  The first player to reach the threshold, usually 10,000, is the winner unless the other players can surpass the winner's score in one more turn.  The winner does not get another turn after passing the threshold.", preferredStyle: UIAlertControllerStyle.Alert)
