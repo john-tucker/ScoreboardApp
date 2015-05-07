@@ -18,6 +18,8 @@
 		3F7EC5011AE6B39F0037811B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F7EC5001AE6B39F0037811B /* Images.xcassets */; };
 		3F7EC5041AE6B39F0037811B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F7EC5021AE6B39F0037811B /* LaunchScreen.xib */; };
 		3F7EC5101AE6B39F0037811B /* CustomScoreboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7EC50F1AE6B39F0037811B /* CustomScoreboardTests.swift */; };
+		3FAFAFD31AF921B300F83695 /* HeartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAFAFD21AF921B300F83695 /* HeartsViewController.swift */; };
+		3FAFAFD51AF9294F00F83695 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAFAFD41AF9294F00F83695 /* TimerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		3F7EC5091AE6B39F0037811B /* CustomScoreboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomScoreboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7EC50E1AE6B39F0037811B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F7EC50F1AE6B39F0037811B /* CustomScoreboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomScoreboardTests.swift; sourceTree = "<group>"; };
+		3FAFAFD21AF921B300F83695 /* HeartsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartsViewController.swift; sourceTree = "<group>"; };
+		3FAFAFD41AF9294F00F83695 /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,8 @@
 				3F7EC4F91AE6B39F0037811B /* AppDelegate.swift */,
 				3F7EC4FB1AE6B39F0037811B /* ViewController.swift */,
 				3F7EC4FD1AE6B39F0037811B /* Main.storyboard */,
+				3FAFAFD41AF9294F00F83695 /* TimerViewController.swift */,
+				3FAFAFD21AF921B300F83695 /* HeartsViewController.swift */,
 				3F2AA0421AF15A3B0017A152 /* GreedScoreArray.swift */,
 				3F2AA0441AF15B030017A152 /* GreedSetupViewController.swift */,
 				3F2AA03E1AF134FE0017A152 /* GreedViewController.swift */,
@@ -228,8 +234,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F2AA0431AF15A3B0017A152 /* GreedScoreArray.swift in Sources */,
+				3FAFAFD51AF9294F00F83695 /* TimerViewController.swift in Sources */,
 				3F2AA03D1AF0508A0017A152 /* ShotsViewController.swift in Sources */,
 				3F7EC4FC1AE6B39F0037811B /* ViewController.swift in Sources */,
+				3FAFAFD31AF921B300F83695 /* HeartsViewController.swift in Sources */,
 				3F7EC4FA1AE6B39F0037811B /* AppDelegate.swift in Sources */,
 				3F2AA0451AF15B030017A152 /* GreedSetupViewController.swift in Sources */,
 				3F7081191AF00A5700DC9AE4 /* SettingsViewController.swift in Sources */,

@@ -10,7 +10,17 @@ import UIKit
 
 
 class ViewController: UIViewController
-{    
+{
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if (segue.identifier == "HeartsSegue")
+        {
+            var dvc = segue.destinationViewController as! HeartsViewController
+            dvc.beginSetup()
+        }
+    }
+
+ 
     
     override func viewDidLoad()
     {
